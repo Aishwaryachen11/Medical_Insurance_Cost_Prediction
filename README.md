@@ -106,7 +106,7 @@ Performed exploratory data analysis to uncover patterns, relationships, and insi
 
 **4.2 Correlation Analysis**
 
-<img src="https://github.com/Aishwaryachen11/Medical_Insurance_Cost_Prediction/blob/main/Images/Correlation%20analyis.png" alt="Description" width="450"/>
+<img src="https://github.com/Aishwaryachen11/Medical_Insurance_Cost_Prediction/blob/main/Images/Correlation%20analyis.png" alt="Description" width="300"/>
 
 The correlation between the features and the target variable (charges) was analyzed:
 •	smoker_yes: Strong positive correlation with charges (0.79). Smoking status is a significant predictor of higher medical costs.
@@ -114,8 +114,9 @@ The correlation between the features and the target variable (charges) was analy
 •	bmi: Weak positive correlation with charges (0.20). Higher BMI is associated with increased medical costs, albeit to a lesser extent.
 •	region and children: Weak correlations, indicating minimal direct influence on medical costs.
 
-###**5. Model Development**
+### **5. Model Development**
 Use this link to access with the notebook in Google Colab : [Open Colab Notebook](https://github.com/Aishwaryachen11/Medical_Insurance_Cost_Prediction/blob/main/Medical_Cost_Prediction.ipynb)
+
 **5.1 Linear Regression**
 A Linear Regression model was developed to predict medical insurance costs. The model was trained on the training set and evaluated using standard metrics such as MSE, RMSE, MAE, and R-squared (R²).
 
