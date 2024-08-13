@@ -1,10 +1,10 @@
 
-### **MEDICAL INSURANCE COST PREDICTION: A COMPARATIVE ANALYSIS USING LINEAR REGRESSION AND GRADIENT REGRESSOR**
+## **MEDICAL INSURANCE COST PREDICTION: A COMPARATIVE ANALYSIS USING LINEAR REGRESSION AND GRADIENT REGRESSOR**
 
-**1. Introduction**
+### **1. Introduction**
 Medical insurance costs are a critical factor in healthcare planning, both for individuals and insurance providers. Predicting these costs accurately allows insurance companies to price their policies more effectively and helps individuals understand their potential medical expenses. In this project, we explore two machine learning approaches—Linear Regression and Gradient Boosting Regressor—to predict medical insurance costs based on various personal attributes. We perform data analysis, feature engineering, model training, and evaluation to compare the performance of these models.
 
-**1. Linear Regression**
+**Linear Regression**
 
 **Concept:**
 Linear Regression is a fundamental algorithm in machine learning and statistics used for predicting a continuous dependent variable based on one or more independent variables. It assumes a linear relationship between the input variables (features) and the output variable (target). The goal is to find the line (or hyperplane in the case of multiple variables) that best fits the data.
@@ -29,7 +29,7 @@ Iterate: Repeat the optimization step until convergence (i.e., when changes in t
 **Application:**
 Linear Regression is best suited for problems where the relationship between the input variables and the output is approximately linear. It is easy to interpret and implement, making it a popular choice for many regression tasks. However, it may not perform well if the underlying data has complex, non-linear relationships.
 
-**2. Gradient Boosting Regressor**
+**Gradient Boosting Regressor**
 
 **Concept:**
 Gradient Boosting is an ensemble learning technique that builds models sequentially, with each new model correcting the errors made by the previous ones. The Gradient Boosting Regressor specifically uses decision trees as weak learners to create a strong predictive model. It works by iteratively minimizing the loss function (often the squared error in regression tasks) using gradient descent, which allows the model to learn complex patterns in the data.
@@ -64,5 +64,35 @@ Gradient Boosting is highly effective in scenarios where the relationships betwe
 Linear Regression is simple, interpretable, and works well when the relationship between variables is linear. It's easy to implement and provides insights into how each feature impacts the target variable.
 Gradient Boosting Regressor is a more complex and powerful algorithm that can model non-linear relationships. It sequentially builds an ensemble of models that collectively improve prediction accuracy. This method is particularly useful when working with complex datasets where interactions between features are not straightforward.
 
-**Objectives of the Project**
+### **2. Objectives of the Project**
 The primary objective of this project is to develop an accurate predictive model for medical insurance costs based on demographic and lifestyle factors. This model can help insurance companies set premiums more effectively and provide individuals with a better understanding of their potential medical expenses. To achieve this, the project is divided into several key objectives, including exploratory data analysis (EDA) and model development.
+
+### **3. Dataset Description**
+The dataset used was downloaded from Kaggle: https://www.kaggle.com/datasets/mirichoi0218/insurance
+
+Data preparation: Prepared the data for modeling by handling missing values, outliers, and encoding categorical variables. Addressed data quality issues such as missing values (though in this case, none were found). Encoded categorical variables such as sex, smoker, and region to transform them into a format suitable for machine learning models.
+
+The dataset contains 1,338 records, each representing an individual's information and corresponding medical insurance charges. The features in the dataset include:
+•	age: Age of the primary beneficiary.
+•	sex: Gender of the insurance contractor (female, male).
+•	bmi: Body Mass Index, providing an understanding of body weights that are relatively high or low relative to height.
+•	children: Number of children covered by health insurance.
+•	smoker: Whether the person is a smoker (yes, no).
+•	region: The residential area of the beneficiary in the U.S. (northeast, southeast, southwest, northwest).
+•	charges: Individual medical costs billed by health insurance.
+
+3. Data Preparation
+3.1 Data Cleaning
+The dataset was checked for missing values, and no missing values were found. This ensured that the entire dataset was available for analysis without the need for imputation or removal of records.
+3.2 Handling Outliers
+Outliers were identified primarily in the bmi and charges columns. Boxplots revealed a few extreme values in the BMI and a significant number of high medical charges. These outliers were retained as they are likely representative of real-world scenarios where some individuals incur much higher medical costs due to specific health conditions.
+3.3 Data Encoding
+Categorical variables such as sex, smoker, and region were encoded using one-hot encoding. This approach allowed us to convert categorical features into numerical format, suitable for model training.
+
+### **4. Exploratory Data Analysis (EDA)**
+Performed exploratory data analysis to uncover patterns, relationships, and insights that will inform the model development process.
+
+1. Analyzed the distribution of key features such as age, BMI, and medical charges to understand their spread and skewness.
+2. Computed correlations between the target variable (medical charges) and other features to identify which variables have the strongest relationships with the target.
+3. Used visual tools like scatter plots, histograms, and boxplots to visually inspect relationships and potential patterns in the data.
+
